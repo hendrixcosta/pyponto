@@ -14,3 +14,17 @@ class Colaborador(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Ponto(models.Model):
+
+    start = models.DateTimeField()
+
+    end = models.DateTimeField()
+
+    colaborador_id = models.ForeignKey(Colaborador,on_delete=models.CASCADE)
+
+    create_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '{} - {} '.format(self.start, self.end)
