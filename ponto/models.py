@@ -18,6 +18,9 @@ class Colaborador(models.Model):
 
 class Ponto(models.Model):
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
     start = models.DateTimeField()
 
     end = models.DateTimeField()
@@ -27,4 +30,4 @@ class Ponto(models.Model):
     create_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '{} - {} '.format(self.start, self.end)
+        return '{} - Ponto em: {}'.format(self.colaborador_id, str(self.start)[:10])
