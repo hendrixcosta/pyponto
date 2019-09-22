@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+   # Postgres
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+  web:
+    build: .
+    command: ["./run.sh"]
+    volumes:
+      - .:/pyponto
+    ports:
+      - "8000:8000"
+    links:
+      - db
+    depends_on:
+      - db
