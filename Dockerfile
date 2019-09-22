@@ -17,5 +17,4 @@ ADD . /pyponto/
 
 RUN chmod +x /pyponto/run.sh
 
-# Django service
 EXPOSE 8000
