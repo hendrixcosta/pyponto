@@ -27,7 +27,7 @@ schema_view = get_swagger_view(title="Swagger Docs")
 
 urlpatterns = [
     url(r'^', include('ponto.urls')),
-    url(r'^docs/', schema_view),
+    url(r'^docs/', schema_view, name='docs'),
     path('admin/', admin.site.urls),
 ]
 

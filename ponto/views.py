@@ -1,8 +1,34 @@
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.decorators import api_view
+
 from ponto.serializers import ColaboradorSerializer, PontoSerializer
 from ponto.models import Colaborador, Ponto
+
+
+class PontoDetailAPIView(APIView):
+
+    def get(self, request, *args, **kwargs):
+        """
+        """
+        id_colaborador = request.query_params.get('id')
+        mes = request.query_params.get('mes')
+
+        if id_colaborador:
+            colaborador_id = Colaborador.objects.get(pk=id_colaborador)
+
+            if mes:
+                reg_ponto_ids = colaborador_id.getPontoMesColaborador(mes)
+
+        return Response(data={
+            'detailsPontoMes':reg_ponto_ids,
+        })
+
+    def post(self, request, *args, **kwargs):
+        my_result = 'Hendrix'
+        return Response(data={"my_return_data":my_result})
+
 
 
 class ColaboradorAPIView(APIView):

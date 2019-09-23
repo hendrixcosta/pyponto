@@ -15,4 +15,6 @@ urlpatterns = [
   url(r'^ponto/(?P<id>[0-9]+)$', views.PontoAPIView.as_view()),
   url(r'^ponto/$', views.PontoAPIListView.as_view()),
 
+  url(r'^pontomes/$', views.PontoDetailAPIView.as_view()),
+
 ]
