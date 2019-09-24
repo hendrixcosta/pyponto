@@ -12,6 +12,10 @@
     <img src="https://travis-ci.org/hendrixcosta/pyponto.svg?branch=master&style=flat-square" alt="Version">
   </a>
   
+  <a href='https://coveralls.io/github/hendrixcosta/pyponto?branch=master'>
+    <img src='https://coveralls.io/repos/github/hendrixcosta/pyponto/badge.svg?branch=master' alt='Coverage Status' />
+  </a>
+  
   
 <p align="center">
   <a href="#recursos">Recursos</a> |
