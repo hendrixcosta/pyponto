@@ -66,3 +66,4 @@ wrapt==1.11.2
 write==2019.4.13
 zipp==0.6.0
 python-dateutil
+pytest-cov
