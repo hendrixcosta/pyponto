@@ -1,10 +1,8 @@
-from django.conf.urls import include, url
+from django.conf.urls import url
 try:
   from django.conf.urls import patterns
 except ImportError:
   pass
-import django
-from django.contrib import admin
 from ponto import views
 
 urlpatterns = [
