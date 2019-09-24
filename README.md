@@ -40,6 +40,47 @@ O PyPonto pode ser facilmente inicializado com o comando a seguir:
 docker-compose up
 ```
 
+Ou então:
+
+```shell
+
+git clone git@github.com:hendrixcosta/pyponto.git
+
+cd pyponto/
+
+virtualenv .  --python=python3
+
+source bin/activate
+
+pip install -r requirements.txt
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+```
+
+
+Setar Usuário para painel administrativo do Django
+
+```shell
+python manage.py createsuperuser
+```
+
+
+Executar
+```shell
+python manage.py runserver
+```
+
+Navegue até:
+
+```shell
+http://localhost:8000/
+
+http://localhost:8000/admin
+```
+
 ## Como usar
 
 irei Dizer
