@@ -77,17 +77,22 @@ Executar
 python manage.py runserver
 ```
 
-Navegue até:
-
-```shell
-http://localhost:8000/
-
-http://localhost:8000/admin
-```
 
 ## Como usar
 
-irei Dizer
+
+Para adicionar Novo Colaborador:
+
+```shell
+curl -X POST -H 'Content-Type: application/json' -u admin:admin "http://127.0.0.1:8000/colaborador/" -d '{"name":"Colaborador1","registration":"0001"}'
+```
+
+Para visualizar todos colaboradores:
+
+```shell
+curl -H 'Content-Type: application/json' -u admin:admin "http://127.0.0.1:8000/colaborador/"
+```
+
 
 
 ## Créditos
