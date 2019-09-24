@@ -8,7 +8,7 @@
 
 <p align="center">
 
-  <a href="https://travis-ci.org/mstuttgart/pycep-correios">
+  <a href="https://travis-ci.org/hendrixcosta/pyponto">
     <img src="https://travis-ci.org/hendrixcosta/pyponto.svg?branch=master&style=flat-square" alt="Version">
   </a>
   
