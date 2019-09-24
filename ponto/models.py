@@ -14,11 +14,6 @@ class Colaborador(models.Model):
         max_length = 120,
     )
 
-    qtd_horas_diarias = models.FloatField(
-        help_text="Horas Diárias",
-        blank=True
-    )
-
     def __str__(self):
         return self.name
 

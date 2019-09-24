@@ -16,9 +16,9 @@ from datetime import timedelta
 @pytest.mark.django_db
 def testModelColaborador():
     colaborador1 = Colaborador.objects.create(
-        name="Colaborador1", registration="0001", qtd_horas_diarias=8)
+        name="Colaborador1", registration="0001")
     colaborador2 = Colaborador.objects.create(
-        name="Colaborador2", registration="0002", qtd_horas_diarias=8)
+        name="Colaborador2", registration="0002")
 
     assert colaborador1.__str__() == 'Colaborador1'
     assert colaborador2.__str__() == 'Colaborador2'
@@ -27,7 +27,7 @@ def testModelColaborador():
 def testModelPonto():
 
     colaborador1 = Colaborador.objects.create(
-        name="Colaborador1", registration="0001", qtd_horas_diarias=8)
+        name="Colaborador1", registration="0001")
 
     ponto1 = Ponto.objects.create(
         horario=now(),

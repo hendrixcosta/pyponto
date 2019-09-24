@@ -14,7 +14,7 @@ def createColaboradorcomPonto(tipo='entrada', dia=False, qtd_registros=1):
     registros criados
     """
     colaborador1 = Colaborador.objects.create(
-        name="Colaborador1", registration="0001", qtd_horas_diarias=8)
+        name="Colaborador1", registration="0001")
 
     if not dia:
         dia = datetime(
