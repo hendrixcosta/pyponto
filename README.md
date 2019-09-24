@@ -15,6 +15,10 @@
   <a href='https://coveralls.io/github/hendrixcosta/pyponto?branch=master'>
     <img src='https://coveralls.io/repos/github/hendrixcosta/pyponto/badge.svg?branch=master' alt='Coverage Status' />
   </a>
+
+  <a href='https://pyponto.readthedocs.io/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/pyponto/badge/?version=latest' alt='Documentation Status' />
+  </a>
   
   
 <p align="center">
