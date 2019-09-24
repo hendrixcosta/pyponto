@@ -21,15 +21,17 @@ class Colaborador(models.Model):
     def __str__(self):
         return self.name
 
-    def getPontoDiaColaborador(self, dia):
+    def getPontoDiaColaborador(self, dia=False):
         """
         Retornar todos registros de ponto do dia
-        :param dia: str <aaaa-mm-dd>
+        :param dia: datetime Dia referencia
         :return: Ponto
         """
-        ponto_ids = Ponto.objects.filter(
+        if dia:
+            return Ponto.objects.filter(
             colaborador_id__exact=self.id, horario__date=dia)
-        return ponto_ids
+
+        return Ponto.objects.filter(colaborador_id__exact=self.id)
 
     def getHoraspordia(self, dia):
 
@@ -65,13 +67,14 @@ class Colaborador(models.Model):
             reference += relativedelta(days=1)
             total_mes += horas_trabalhadas if horas_trabalhadas else relativedelta()
 
+        qtdTotalHorasMes = (total_mes.days * 24) + total_mes.hours
+        qtdTotalHorasMes = '{:02}:{:02}:{:02}'.format(
+            qtdTotalHorasMes, total_mes.minutes, total_mes.seconds)
+
         return {
             'pontoMes': detail_ponto_mes,
-            'qtdTotalHorasMes' :
-                '{} Horas e {} Minutos!'.format(
-                    total_mes.hours, total_mes.minutes),
+            'qtdTotalHorasMes': qtdTotalHorasMes,
         }
-
 
 class Ponto(models.Model):
 
