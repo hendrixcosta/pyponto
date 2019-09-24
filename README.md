@@ -36,7 +36,7 @@
 -   Calcular horas trabalhadas no mês do funcionário
 
 
-## Instalação
+## Subir plataforma com Docker
 
 O PyPonto pode ser facilmente inicializado com o comando a seguir:
 
@@ -44,7 +44,9 @@ O PyPonto pode ser facilmente inicializado com o comando a seguir:
 docker-compose up
 ```
 
-Ou então:
+
+## Desenvolvimento
+
 
 ```shell
 
@@ -52,33 +54,13 @@ git clone git@github.com:hendrixcosta/pyponto.git
 
 cd pyponto/
 
-virtualenv .  --python=python3
-
-source bin/activate
-
-pip install -r requirements.txt
-
-python manage.py makemigrations
-
-python manage.py migrate
+./run-dev.sh
 
 ```
 
 
-Setar Usuário para painel administrativo do Django
 
-```shell
-python manage.py createsuperuser
-```
-
-
-Executar
-```shell
-python manage.py runserver
-```
-
-
-## Como usar
+## Utilização
 
 
 Para adicionar Novo Colaborador:
