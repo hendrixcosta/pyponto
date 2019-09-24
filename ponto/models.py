@@ -99,14 +99,3 @@ class Ponto(models.Model):
     def __str__(self):
         return '{} - Ponto em: {}'.format(
             self.colaborador_id, str(self.horario)[:10])
-
-    def getPontoMes(self, mes, id_colaborador):
-        """
-        Buscar Registro de ponto do mês e do colaborador
-        :param mes: int Mês a ser consultado
-        :param id_colaborador: int id do colaborador
-        :return: Ponto Registros de Ponto do mês
-        """
-        colaborador_id = Colaborador.objects.get(pk=id_colaborador)
-
-        return colaborador_id.getPontoMesColaborador(mes)
