@@ -1,0 +1,5 @@
+============
+Contributing
+============
+
+- Hendrix Costa
