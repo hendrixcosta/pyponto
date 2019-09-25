@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-virtualenv .  --python=python3
+virtualenv . --python=python3
 
 source bin/activate
 
 pip install -r requirements.txt
+pip install -r requirements-dev.txt
 
 python manage.py makemigrations --settings=settings-dev
 

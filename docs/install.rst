@@ -11,10 +11,6 @@ At the command line:
 
     docker-compose up
 
-.. note:: Com esses scripts sera criado user: ``admin`` com a senha padrão:``admin``.
-    Para criar novo usuário:  ```$ python manage.py createsuperuser```
-
-
 Development
 ===========
 
@@ -27,3 +23,10 @@ Or, to development enviroment
     cd pyponto/
 
     ./run-dev.sh
+
+
+
+.. note:: Com esses scripts sera criado user: ``admin`` com a senha padrão:``admin``.
+
+    Para criar novo usuário:  ```$ python manage.py createsuperuser```
+
