@@ -1,17 +1,10 @@
 # Create your tests here.
 
 import pytest
-import pytz
 from django.utils.timezone import now
 
 from ponto.models import Colaborador, Ponto
 
-from django.utils import timezone
-
-
-
-
-from datetime import timedelta
 
 @pytest.mark.django_db
 def testModelColaborador():

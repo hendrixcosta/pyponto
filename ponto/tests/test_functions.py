@@ -1,8 +1,9 @@
 # Create your tests here.
 
-from datetime import timedelta, datetime
-from dateutil.relativedelta import relativedelta
+from datetime import datetime
+
 import pytest
+from dateutil.relativedelta import relativedelta
 from django.utils.timezone import get_current_timezone
 
 from ponto.models import Colaborador, Ponto
