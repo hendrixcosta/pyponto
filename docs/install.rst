@@ -2,17 +2,25 @@
 Installation
 ============
 
+Docker
+======
+
 At the command line:
 
-.. code-block:: bash
+::
 
     docker-compose up
 
+.. note:: Com esses scripts sera criado user: ``admin`` com a senha padrão:``admin``.
+    Para criar novo usuário:  ```$ python manage.py createsuperuser```
 
+
+Development
+===========
 
 Or, to development enviroment
 
-.. code-block:: bash
+::
 
     git clone git@github.com:hendrixcosta/pyponto.git
 
