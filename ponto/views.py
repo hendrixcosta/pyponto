@@ -9,26 +9,45 @@ from ponto.models import Colaborador, Ponto
 
 class PontoDetailAPIView(APIView):
 
+
+    def getDetailsColaborar_idMes(self, id_colaborador, mes):
+        """
+        """
+
+        if not id_colaborador or not mes:
+            return Response(status=500)
+
+        if not Colaborador.objects.filter(id__exact=id_colaborador):
+            return {'ERRO': 'Colaborador não cadastrado!'}
+
+        colaborador_id = Colaborador.objects.get(pk=id_colaborador)
+        detailsPontoMes = colaborador_id.getPontoMesColaborador(mes)
+        return detailsPontoMes
+
     def get(self, request, *args, **kwargs):
         """
         """
         id_colaborador = request.query_params.get('id')
         mes = request.query_params.get('mes')
 
-        if id_colaborador:
-            colaborador_id = Colaborador.objects.get(pk=id_colaborador)
-
-            if mes:
-                reg_ponto_ids = colaborador_id.getPontoMesColaborador(mes)
+        detailsPontoMes = self.getDetailsColaborar_idMes(id_colaborador, mes)
 
         return Response(data={
-            'detailsPontoMes':reg_ponto_ids,
+            'detailsPontoMes': detailsPontoMes,
         })
 
-    def post(self, request, *args, **kwargs):
-        my_result = 'Hendrix'
-        return Response(data={"my_return_data":my_result})
+    def post(self, request, format=None):
+        """
+        """
 
+        id_colaborador = request.data.get('colaborador_id')
+        mes = request.data.get('mes')
+
+        detailsPontoMes = self.getDetailsColaborar_idMes(id_colaborador, mes)
+
+        return Response(data={
+            'detailsPontoMes': detailsPontoMes,
+        })
 
 
 class ColaboradorAPIView(APIView):

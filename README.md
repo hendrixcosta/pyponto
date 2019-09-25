@@ -91,6 +91,9 @@ Para visualizar detalhes de registro de ponto do mês
 
 ```shell
 curl -H 'Content-Type: application/json' -u admin:admin "http://127.0.0.1:8000/pontomes/?id=1&mes=1"
+
+
+curl -X POST -H 'Content-Type: application/json' -u admin:admin "http://127.0.0.1:8000/pontomes/" -d '{"colaborador_id":"1","mes":"1"}'
 ```
 
 
