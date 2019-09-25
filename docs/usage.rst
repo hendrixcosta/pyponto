@@ -37,16 +37,26 @@ Para visualizar todos registros de Pontos
     curl -H 'Content-Type: application/json' -u admin:admin "http://127.0.0.1:8000/ponto/"
 
 
-Ponto DEtalhado do mês
+Ponto Detalhado do mês
 ======================
 
 Para visualizar detalhes de registro de ponto do mês
 
-    Paramêtros: id do funcionario e mes para detalhes
+    Paramêtros: id do funcionario e mês para detalhes
+
+GET
+---
 
 ::
 
     curl -H 'Content-Type: application/json' -u admin:admin "http://127.0.0.1:8000/pontomes/?id=1&mes=1"
+
+POST
+----
+
+::
+
+    curl -X POST -H 'Content-Type: application/json' -u admin:admin "http://127.0.0.1:8000/pontomes/" -d '{"colaborador_id":"1","mes":"1"}'
 
 .. note:: Utilizar usuário  ```admin``` com a senha padrão: ```admin```.
 

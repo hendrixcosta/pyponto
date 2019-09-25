@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-virtualenv . --python=python3
+virtualenv . --python=python3.6
 
 source bin/activate
 
