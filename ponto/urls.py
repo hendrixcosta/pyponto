@@ -22,6 +22,6 @@ urlpatterns = [
 
   url(r'^pontomes/$', views.PontoDetailAPIView.as_view()),
 
-  path('vue/$', TemplateView.as_view(template_name='index.html')),
+  url('^vue/$', TemplateView.as_view(template_name='index.html')),
 
 ]
