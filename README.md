@@ -19,6 +19,10 @@
   <a href='https://pyponto.readthedocs.io/en/latest/?badge=latest'>
     <img src='https://readthedocs.org/projects/pyponto/badge/?version=latest' alt='Documentation Status' />
   </a>
+
+  <a href="https://badge.fury.io/py/pyponto">
+    <img src="https://badge.fury.io/py/pyponto.svg" alt="PyPI version" height="18">
+  </a>
   
   
 <p align="center">
