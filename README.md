@@ -20,10 +20,14 @@
     <img src='https://readthedocs.org/projects/pyponto/badge/?version=latest' alt='Documentation Status' />
   </a>
 
-  <a href="https://badge.fury.io/py/pyponto">
-    <img src="https://badge.fury.io/py/pyponto.svg" alt="PyPI version" height="18">
+  <a href="https://pypi.org/project/pycep-correios">
+      <img src="https://img.shields.io/pypi/v/pyponto.svg?style=flat-square" alt="Ratings">
   </a>
-  
+
+  <a href="https://pypi.org/project/pycep-correios/">
+      <img src="https://img.shields.io/pypi/pyversions/pyponto.svg?style=flat-square" alt="Version">
+  </a>
+
   
 <p align="center">
   <a href="#recursos">Recursos</a> |
