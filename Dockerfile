@@ -7,7 +7,7 @@ WORKDIR /pyponto
 # Installing OS Dependencies
 RUN apt-get update && apt-get upgrade -y && apt-get install -y libsqlite3-dev
 
-RUN pip install -U pip setuptools psycopg2
+RUN pip install -U pip setuptools psycopg2-binary
 
 COPY requirements.txt /pyponto/
 
