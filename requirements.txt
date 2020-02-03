@@ -2,5 +2,5 @@ django
 djangorestframework
 django-rest-swagger
 drf-generators
-psycopg2
+psycopg2-binary
 python-dateutil
